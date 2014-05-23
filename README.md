@@ -1,5 +1,7 @@
 # Google Analytics Social Tracking Helper
 
+[![Build Status](https://travis-ci.org/zytzagoo/ga-social-tracking-js.svg?branch=master)](https://travis-ci.org/zytzagoo/ga-social-tracking-js)
+
 Include this on your GA-enabled web property and it should start tracking/logging your visitor's social interactions automatically.
 
 Requires a GA-enabled web property, obviously.
