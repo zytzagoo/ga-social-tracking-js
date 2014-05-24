@@ -6,7 +6,7 @@ Requires a GA-enabled web property, obviously.
 
 ## Demo
 
-See [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/_gaq.html) and [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/ga.html).
+See [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/gaq.html) and [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/ga.html).
 
 ## Quickstart
 
