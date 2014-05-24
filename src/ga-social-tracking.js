@@ -38,6 +38,10 @@ ZWF_GA_Social_Tracker.ga_send = function(arr_params) {
             throw 'No usable GA implementation found';
         }
     }
+    // call our global callback function if it's defined
+    if ('function' === typeof zwf_ga_st_callback) {
+        zwf_ga_st_callback.call(this, arr_params);
+    }
 };
 
 ZWF_GA_Social_Tracker.track_twitter = function(intent_event) {

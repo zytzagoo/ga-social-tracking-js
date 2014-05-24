@@ -1,6 +1,4 @@
-# Google Analytics Social Tracking Helper
-
-[![Build Status](https://travis-ci.org/zytzagoo/ga-social-tracking-js.svg?branch=master)](https://travis-ci.org/zytzagoo/ga-social-tracking-js)
+# Google Analytics Social Tracking Helper [![Build Status](https://travis-ci.org/zytzagoo/ga-social-tracking-js.svg?branch=master)](https://travis-ci.org/zytzagoo/ga-social-tracking-js)
 
 Include this on your GA-enabled web property and it should start tracking/logging your visitors' social interactions automatically.
 
@@ -8,7 +6,7 @@ Requires a GA-enabled web property, obviously.
 
 ## Demo
 
-Soon (TM). There's a test-suite though, until a demo appears.
+See [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/_gaq.html) and [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/ga.html).
 
 ## Quickstart
 
@@ -21,13 +19,14 @@ Include the script at the bottom of your HTML pages, ideally before the closing 
 * Supports both `ga.js` and `analytics.js` web properties / APIs
 * Facebook social actions: `like`, `unlike`, `send`
 * Twitter intent events: `follow`, `tweet`, `retweet`, `favorite`, `click`
+* If you define a function called `zwf_ga_st_callback` it'll be called (and it'll receive an array of parameters sent to GA)
 * Other social networks depending on feasability/interest (PRs appreciated!)
 
 ## Devdocs
 
-* https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiSocialTracking
-* https://developers.google.com/analytics/devguides/collection/analyticsjs/social-interactions
-* https://dev.twitter.com/docs/tfw/events
+* [ga.js social tracking](https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiSocialTracking)
+* [analytics.js social tracking](https://developers.google.com/analytics/devguides/collection/analyticsjs/social-interactions)
+* [twitter for websites - events](https://dev.twitter.com/docs/tfw/events)
 
 ## Contributing
 
