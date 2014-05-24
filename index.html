@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>ga-social-tracking-js by zytzagoo</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>ga-social-tracking-js</h1>
+          <h2>Google Analytics Social Tracking Helper (js)</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/zytzagoo/ga-social-tracking-js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/zytzagoo/ga-social-tracking-js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/zytzagoo/ga-social-tracking-js" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1><a name="user-content-google-analytics-social-tracking-helper-" class="anchor" href="#google-analytics-social-tracking-helper-"><span class="octicon octicon-link"></span></a>Google Analytics Social Tracking Helper <a href="https://travis-ci.org/zytzagoo/ga-social-tracking-js"><img src="https://camo.githubusercontent.com/e27f4dedb61224423263dbb8d4e9484885982102/68747470733a2f2f7472617669732d63692e6f72672f7a79747a61676f6f2f67612d736f6369616c2d747261636b696e672d6a732e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/zytzagoo/ga-social-tracking-js.svg?branch=master" style="max-width:100%;"></a></h1>
+
+<p>Include this on your GA-enabled web property and it should start tracking/logging your visitors' social interactions automatically.</p>
+
+<p>Requires a GA-enabled web property, obviously.</p>
+
+<h2>
+<a name="user-content-demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>See <a href="http://zytzagoo.github.io/ga-social-tracking-js/demo/_gaq.html">here</a> and <a href="http://zytzagoo.github.io/ga-social-tracking-js/demo/ga.html">here</a>.</p>
+
+<h2>
+<a name="user-content-quickstart" class="anchor" href="#quickstart"><span class="octicon octicon-link"></span></a>Quickstart</h2>
+
+<p>Include the script at the bottom of your HTML pages, ideally before the closing <code>&lt;/body&gt;</code> tag:</p>
+
+<pre><code>&lt;script src="some-path/ga-social-tracking.min.js"&gt;
+</code></pre>
+
+<h2>
+<a name="user-content-features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Supports both <code>ga.js</code> and <code>analytics.js</code> web properties / APIs</li>
+<li>Facebook social actions: <code>like</code>, <code>unlike</code>, <code>send</code>
+</li>
+<li>Twitter intent events: <code>follow</code>, <code>tweet</code>, <code>retweet</code>, <code>favorite</code>, <code>click</code>
+</li>
+<li>If you define a function called <code>zwf_ga_st_callback</code> it'll be called (and it'll receive an array of parameters sent to GA)</li>
+<li>Other social networks depending on feasability/interest (PRs appreciated!)</li>
+</ul><h2>
+<a name="user-content-devdocs" class="anchor" href="#devdocs"><span class="octicon octicon-link"></span></a>Devdocs</h2>
+
+<ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiSocialTracking">ga.js social tracking</a></li>
+<li><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/social-interactions">analytics.js social tracking</a></li>
+<li><a href="https://dev.twitter.com/docs/tfw/events">twitter for websites - events</a></li>
+</ul><h2>
+<a name="user-content-contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Grab the latest code:</p>
+
+<pre><code>git clone https://github.com/zytzagoo/ga-social-tracking-js.git
+</code></pre>
+
+<p>Change stuff, run the tests, lint it, file a PR. Have fun.</p>
+
+<p>A Makefile helps you do some of the above things:</p>
+
+<div class="highlight highlight-make"><pre>    make lint <span class="c"># runs jshint lint checking</span>
+    make <span class="nb">test</span> <span class="c"># runs the test suite using phantomjs</span>
+    make build/ga-social-tracking.min.js <span class="c"># creates the built/minified version</span>
+    make <span class="c"># creates the built/minified version</span>
+</pre></div>
+
+<p>You'll need at least <code>jshint</code> and <code>uglifyjs</code> installed for this.</p>
+
+<p>Pull requests are welcome, as long as they make sense!</p>
+
+<p>Some basic rules:</p>
+
+<ul>
+<li>automated builds/tests are green</li>
+<li>code is lint-free (no errors, run <code>make lint</code>)</li>
+<li>try avoiding external dependencies</li>
+<li>no errors/warnings thrown in recent versions of Chrome, Firefox, Safari, IE(s)...</li>
+<li>no errors/warnings on iOS and Android platforms</li>
+</ul><h2>
+<a name="user-content-license-mit" class="anchor" href="#license-mit"><span class="octicon octicon-link"></span></a>License (MIT)</h2>
+
+<p>Copyright (c) 2014 zytzagoo</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+        </section>
+
+        <footer>
+          ga-social-tracking-js is created &amp; maintained by <a href="https://github.com/zytzagoo">zytzagoo</a><br>
+          This page was first generated by <a href="http://pages.github.com">GitHub Pages</a> and then butchered. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-51313946-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>

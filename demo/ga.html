@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="twitter:widgets:csp" content="on">
+        <title>Google Analytics Social Tracking Helper Demo (ga()/analytics.js version)</title>
+        <meta name="description" content="A demonstration of Google Analytics Social Tracking Helper usage. Find out more at the project's Github page: http://zytzagoo.github.io/ga-social-tracking-js/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo:900">
+        <link rel="stylesheet" href="../assets/styles.css">
+        <!--[if lt IE 9]>
+        <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>
+            // analytics
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-51313946-1', 'zytzagoo.github.io');
+            ga('send', 'pageview');
+        </script>
+        <script type="text/javascript" charset="utf-8">
+            // twitter js async api
+            window.twttr = (function (d,s,id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+                js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+        </script>
+    </head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=278096605696172&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="container">
+        <div class="inner">
+            <header>
+                <h1>Google Analytics Social Tracking Helper Demo</h1>
+                <h2>Facebook &amp; Twitter social plugins (async)<br>using <code>ga() (analytics.js)</code> analytics</h2>
+            </header>
+            <section id="main_content">
+                <p>Demo page. See <a href="http://zytzagoo.github.io/ga-social-tracking-js/">the project page</a> for more information.</p>
+                <p>
+                    Like this Page!
+                    <div class="fb-like" data-width="150" data-height="50" data-href="http://zytzagoo.github.io/ga-social-tracking-js" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                </p>
+                <hr>
+                <p>How does one know that the tracking is actually working?</p>
+                <ol>
+                    <li>There are no errors in the browser.</li>
+                    <li>Performing an action should trigger an alert and a console message (where you can see the parameters sent to GA).</li>
+                </ol>
+                <hr>
+                <p>Below are test tweet buttons. They're a lot easier to test/demo, just click one. You don't have to tweet, or be logged in, or anything really, it should just work...</p>
+                <hr>
+                <p>Tweet Button for <code>http://zytzagoo.github.io/ga-social-tracking-js/</code> (using the query string to set the url and via properties):</p>
+                <div><a href="http://twitter.com/share?url=http://zytzagoo.github.io/ga-social-tracking-js/&amp;via=zytzagoo" class="twitter-share-button">Tweet</a></div>
+                <hr>
+                <p>Tweet Button for <code>http://zytzagoo.github.io/ga-social-tracking-js/</code> (using data attributes):</p>
+                <div><a href="http://twitter.com/share" data-url="http://zytzagoo.github.io/ga-social-tracking-js/" data-via="zytzagoo" class="twitter-share-button">Tweet</a></div>
+            </section>
+            <footer>Abusing the GH Pages Tactile theme created by <a href="https://twitter.com/jasonlong">Jason Long</a> for demo purposes.</footer>
+        </div>
+    </div>
+    <script src="../build/ga-social-tracking.min.js"></script>
+    <script>
+    function zwf_ga_st_callback(arr_params) {
+        console.log(arr_params);
+        alert(arr_params);
+    }
+    </script>
+</body>
+</html>
