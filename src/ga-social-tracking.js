@@ -73,7 +73,7 @@ ZWF_GA_Social_Tracker.track_twitter = function(intent_event) {
         // try grabbing the url param from the iframe if it's there and add
         // it to whatever's in the label already
         if (intent_event.target && intent_event.target.nodeName == 'IFRAME') {
-            var url = this.extract_param_from_uri(intent_event.target.src, 'url');
+            var url = ZWF_GA_Social_Tracker.extract_param_from_uri(intent_event.target.src, 'url');
             if (url) {
                 label += ' - ' + url;
             }
@@ -83,13 +83,13 @@ ZWF_GA_Social_Tracker.track_twitter = function(intent_event) {
         var params = ['_trackSocial', 'Twitter', intent_event.type];
         // add label to the end
         params.push(label);
-        this.ga_send(params);
+        ZWF_GA_Social_Tracker.ga_send(params);
     }
 };
 
 ZWF_GA_Social_Tracker.track_facebook = function(action, uri){
     var params = ['_trackSocial', 'Facebook', action, uri];
-    this.ga_send(params);
+    ZWF_GA_Social_Tracker.ga_send(params);
 };
 
 // bind FB events

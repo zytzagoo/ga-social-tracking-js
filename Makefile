@@ -3,10 +3,10 @@ LINT = jshint --show-non-errors
 
 .PHONY: all clean
 
+all: build/ga-social-tracking.min.js
+
 clean:
 	rm -f build/ga-social-tracking.min.js
-
-all: build/ga-social-tracking.min.js
 
 lint: src/ga-social-tracking.js
 	$(LINT) $<
