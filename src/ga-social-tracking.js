@@ -1,3 +1,9 @@
+/**
+* ga-social-tracking-js
+* http://zytzagoo.github.io/ga-social-tracking-js/
+* Copyright (c) 2014 zytzagoo
+*/
+
 /*global window:true, unescape:true, _gaq:true, FB:true, twttr:true */
 
 var ZWF_GA_Social_Tracker = {};
