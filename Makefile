@@ -29,4 +29,4 @@ dist/ga-social-tracking.min.js: src/ga-social-tracking.js
 wp-plugin: dist/ga-social-tracking.min.js src/wp-ga-social-tracking-js.php
 	-mkdir $(DIST_WP) 2>/dev/null
 	cp -f src/wp-ga-social-tracking-js.php dist/ga-social-tracking.min.js $(DIST_WP_NQ)
-	zip -9r dist/wp-ga-social-tracking-js.zip $(DIST_WP_NQ)
+	cd dist && zip -9r wp-ga-social-tracking-js.zip wp-ga-social-tracking-js && cd ..
