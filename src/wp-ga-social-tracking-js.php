@@ -16,7 +16,7 @@ function ga_social_tracking_js() {
         'ga-social-tracking-js', 
         plugins_url( 'ga-social-tracking.min.js', __FILE__ ), 
         array(),
-        '',
+        null,
         true
     );
 }
