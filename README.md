@@ -8,6 +8,12 @@ Requires a GA-enabled web property, obviously.
 
 See [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/gaq.html) and [here](http://zytzagoo.github.io/ga-social-tracking-js/demo/ga.html).
 
+## WordPress Plugin
+
+[Download](http://zytzagoo.github.io/ga-social-tracking-js/dist/wp-ga-social-tracking-js.zip) or look for `wp-ga-social-tracking-js.zip` within the `dist/` directory.
+
+It might never appear in the official WP.org plugin repo.
+
 ## Quickstart
 
 Include the script at the bottom of your HTML pages, ideally before the closing `</body>` tag:
@@ -41,7 +47,7 @@ A Makefile helps you do some of the above things:
 ```make
     make lint # runs jshint lint checking
     make test # runs the test suite using phantomjs
-    make build/ga-social-tracking.min.js # creates the built/minified version
+    make dist/ga-social-tracking.min.js # creates the built/minified version
     make # creates the built/minified version
 ```
 
